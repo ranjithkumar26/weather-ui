@@ -1,0 +1,19 @@
+.table-list{
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    table{
+        background: #FFF;
+        border-collapse: collapse;
+        margin: 20px 0 !important;
+        width: 100%;
+        td,th{
+            padding: 8px;
+            vertical-align: top;
+            border: 1px solid #c2c2c2;
+            .smsData{
+                width: 250px;
+            }
+        }
+    }
+}

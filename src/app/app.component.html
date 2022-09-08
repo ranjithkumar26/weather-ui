@@ -1,0 +1,7 @@
+<div class="container">
+    <app-weather-form></app-weather-form>
+    <div *ngIf="chartData" class="chart-view">
+        <app-line-chart></app-line-chart>
+        <app-table-view></app-table-view>
+    </div>
+</div>

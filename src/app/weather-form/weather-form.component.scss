@@ -1,0 +1,94 @@
+.query-form{
+    max-width: 340px;
+    margin: auto;
+    img{
+        width: 100%;
+    }
+    p{
+        font-size: 18px;
+        margin: 32px 0 0;
+        font-weight: 700;
+        color: #4A4B4D;
+        line-height: 27px;
+    }
+    .input-container{
+        display: flex;
+        flex-direction: column;
+        label{
+            font-size: 12px;
+            font-weight: 400;
+            margin: 16px 0 8px;
+        }
+        .inp-wraper{
+            position: relative;
+            .close-icon{
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                color: #FB6868;
+                cursor: pointer;
+                font-size: 12px;
+                margin: 0;
+            }
+        }
+        .errorfield > input  {
+              height: 40px;
+              outline: transparent;
+              border-radius: 4px;
+              border: 1px solid #FB6868 !important;
+        }
+        input{
+            border: none;
+            padding: 10px 8px;
+            background-color: #FFF;
+            border: 1px solid #D1D1D2;
+            font-size: 14px;
+            border-radius: 4px;
+            width: 100%;
+            line-height: 19px;
+            &.disabled{
+                background-color: #E8E8E9;
+                color: #A1A1A1;
+                pointer-events: none;
+            }
+            &:focus,
+            &:focus-visible{
+                outline: none;
+            }
+        }
+        .err-msg {
+            font-size: 12px;
+        color: #FB6868;
+        margin: 10px 0;
+    }
+    }
+    button{
+        padding: 14px 30px;
+        width: 100%;
+        border: none;
+        outline: none;
+        color: #FFF;
+        border-radius: 5px;
+        line-height: 20px;
+        font-size: 14px;
+        background-color: #43425D;
+        cursor: pointer;
+        &.disabled{
+            background-color: #A1A1A1;
+            pointer-events: none;
+        }
+    }
+    .hint-text{
+        color: #4D4F5C;
+        margin: 4px 0 32px;
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+     margin: 0;
+}
+}

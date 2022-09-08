@@ -1,0 +1,42 @@
+<div class="query-form">
+  <img src="../assets/logo/Logos.png" alt="brand logo" />
+  <p class="header">Please fill the fields below</p>
+  <form action="" [formGroup]="weatherRequestForm" (submit)="onSubmit()">
+    <div class="input-container">
+      <label for="city">City</label>
+      <div [ngClass]="cityError ? 'inp-wraper errorfield' : 'inp-wraper'">
+        <input type="text" id="city" formControlName="city" autocomplete="off" />
+        <p
+          *ngIf="weatherRequestForm.value.city.length && cityError"
+          class="close-icon"
+          (click)="clearField('city')"
+        >
+          &#x2715;
+        </p>
+      </div>
+    </div>
+    <div class="input-container">
+      <label for="mobile">Mobile Number</label>
+      <div [ngClass]="smsError ? 'inp-wraper errorfield' : 'inp-wraper'">
+        <input type="number" id="mobile" formControlName="phoneNumber" autocomplete="off" />
+        <p
+          *ngIf="weatherRequestForm.value.phoneNumber && smsError"
+          class="close-icon"
+          (click)="clearField('phoneNumber')"
+        >
+          &#x2715;
+        </p>
+      </div>
+      <p class="err-msg" *ngIf="isError">
+        {{ errorMessage }}
+      </p>
+      <p *ngIf="!isError" class="hint-text">Please add a country code before mobile number</p>
+    </div>
+    <button
+      [ngClass]="disableSubmit ? 'disabled' : ''"
+      [disabled]="disableSubmit"
+    >
+      Submit
+    </button>
+  </form>
+</div>
