@@ -5,7 +5,7 @@
     <div class="input-container">
       <label for="city">City</label>
       <div [ngClass]="cityError ? 'inp-wraper errorfield' : 'inp-wraper'">
-        <input type="text" id="city" formControlName="city" autocomplete="off" />
+        <input type="text" id="city" formControlName="city" autocomplete="off" (keyup)="cityError = false;  isError = false" />
         <p
           *ngIf="weatherRequestForm.value.city.length && cityError"
           class="close-icon"
@@ -18,7 +18,7 @@
     <div class="input-container">
       <label for="mobile">Mobile Number</label>
       <div [ngClass]="smsError ? 'inp-wraper errorfield' : 'inp-wraper'">
-        <input type="number" id="mobile" formControlName="phoneNumber" autocomplete="off" />
+        <input type="number" id="mobile" formControlName="phoneNumber" autocomplete="off" (keyup)="smsError = false; isError = false "/>
         <p
           *ngIf="weatherRequestForm.value.phoneNumber && smsError"
           class="close-icon"
