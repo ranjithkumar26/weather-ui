@@ -78,6 +78,7 @@ export class WeatherFormComponent implements OnDestroy{
         },
         error:(err) => {
           this.isError = true;
+          this.apiCounter = 0;   // To reset the counter on error cases
           this.errorMessage = err?.error?.message;
           if(this.errorMessage.split('-')[0] === 'Unable to Send SMS '){
             this.smsError = true;
